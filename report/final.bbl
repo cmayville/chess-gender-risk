@@ -1,0 +1,111 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{cms/global//global/global}
+    \entry{chesstempo}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeltitlesource}{title}
+      \field{title}{Chess Games Database}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://old.chesstempo.com/game-database.html
+      \endverb
+      \verb{url}
+      \verb https://old.chesstempo.com/game-database.html
+      \endverb
+    \endentry
+    \entry{fide-ratings}{online}{}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labeltitlesource}{title}
+      \field{title}{FIDE Ratings Database}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://ratings.fide.com/download_lists.phtml
+      \endverb
+      \verb{url}
+      \verb https://ratings.fide.com/download_lists.phtml
+      \endverb
+    \endentry
+    \entry{gerdes:gender}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=86411c300cf9df6ebf2e6a7136298c14}{%
+           family={Gerdes},
+           familyi={G\bibinitperiod},
+           given={Christer},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec93987489a5f6cb889c0fa08ffe5c6c}{%
+           family={Gränsmark},
+           familyi={G\bibinitperiod},
+           given={Patrik},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b14d43005cbca7736fc2d2827120a93}
+      \strng{fullhash}{9b14d43005cbca7736fc2d2827120a93}
+      \strng{bibnamehash}{9b14d43005cbca7736fc2d2827120a93}
+      \strng{authorbibnamehash}{9b14d43005cbca7736fc2d2827120a93}
+      \strng{authornamehash}{9b14d43005cbca7736fc2d2827120a93}
+      \strng{authorfullhash}{9b14d43005cbca7736fc2d2827120a93}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper aims to measure differences in risk behavior among expert chess players. The study employs a panel data set on international chess with 1.4million games recorded over a period of 11years. The structure of the data set allows us to use individual fixed-effect estimations to control for aspects such as innate ability as well as other characteristics of the players. Most notably, the data contains an objective measure of individual playing strength, the so-called Elo rating. In line with previous research, we find that women are more risk-averse than men. A novel finding is that men choose more aggressive strategies when playing against female opponents even though such strategies reduce their winning probability.}
+      \field{issn}{0927-5371}
+      \field{journaltitle}{Labour Economics}
+      \field{note}{European Association of Labour Economists 21st annual conference, Tallinn, Estonia, 10-12 September 2009}
+      \field{number}{5}
+      \field{title}{Strategic behavior across gender: A comparison of female and male expert chess players}
+      \field{volume}{17}
+      \field{year}{2010}
+      \field{pages}{766\bibrangedash 775}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.labeco.2010.04.013
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0927537110000588
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0927537110000588
+      \endverb
+      \keyw{Risk aversion,Competitiveness,Gender,Culture,Mixed-sex competition}
+    \endentry
+    \entry{lc0}{online}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labeltitlesource}{title}
+      \field{title}{Leela Chess Zero}
+      \field{year}{2022}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://lczero.org/
+      \endverb
+      \verb{url}
+      \verb https://lczero.org/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,5 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'writeup.tex.blg'
+[66] biber:340> INFO - === Sat Nov  5, 2022, 17:06:53
+[204] Utils.pm:410> ERROR - Cannot find 'writeup.tex.bcf'!
+[205] Biber.pm:135> INFO - ERRORS: 1

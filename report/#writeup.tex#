@@ -1,0 +1,56 @@
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[margin=1in]{geometry}
+
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{biblatex-chicago}
+\addbibresource{references.bib}
+\pdfgentounicode=1
+
+
+\title{Risk Aversion and Gender in Chess}
+\author{Charlie Mayville}
+
+\begin{document}
+\maketitle
+
+\section*{Question}
+There is a lot of economic literature about the effect of gender on risk aversion, most studies pointing to an increased risk aversion among women.\footcite{charness:gender}
+An interesting question is whether the selection effect that occurs in male dominated spaces lends itself to any preference towards personality that may be measurable via risk aversion.
+Chess is a good candidate for this study since it is easily quantifiable and extensively recorded.
+
+I intend to follow a 2010 study by Gerdes and Gränsmark\footcite{gerdes:gender} to determine the causal effect of gender on playing risky chess. In the study they use a simple OLS model, which could be replaced with a more robust statistical method learned in this class.
+
+\section*{Dataset and Methods}
+ChessTempo\footcite{chesstempo} has a free database of games with pgn, rating, and FIDE id. 
+Cross-checking this against FIDE's\footcite{fide-ratings} list of rated players gives us gender along with all the covariates used in Gerdes and Gränsmark with a handful of others.
+That study uses only the top 100 female and male chess players. Selecting with some cutoff only top players seems like a reasonable thing to do.
+
+Measuring risky play is a bit trickier. Gerdes and Gränsmark ask a handful of players above master level to measure whether a opening position is "solid" or "aggressive".
+To me this seems utterly absurd.
+First of all depending on players not incredibly far from my own skill level to help evaluate some of the best players in the world feels silly.
+But more importantly, most of the game is played after the opening.
+While some openings may really lead to solid games no matter what (like the Grünfeld), it is very unclear
+
+Instead of doing this, I intend to attempt to measure risky play as how much a move increased the probability of a draw, all else held equal.
+Modern chess engines that run on neural networks evaluate positions based on WDL likelihood, which makes this easier to measure.
+$$ Risk Score = \sum{ 1 - \min{(\Delta \textrm{\emph{win chance}}, \Delta \textrm{\emph{draw chance}})} }$$
+I have written a Perl script, given a list of pgns, to calculate this score using Lc0\footcite{lc0}, an engine far above human strength on virtually any hardware. 
+Running it on a few sample games seems to give a positive gut-check.
+If it does not work out I can always fall back on Gerdes and Gränsmark's method.
+
+\section*{Possible Problems}
+The first problem I could foresee with this project is my estimator of risk not capturing what I expect it to measure.
+The tricky part about risky play is it has more to do with intent than with the technical evaluation of the resulting position. 
+Using only high rated games could control this problem, as it is conceivable that the better you are the more likely your intent to be realized in the position, but this could only be a loose corollary, especially in positions complicated for humans to evaluate.
+
+The second issue I am not quite sure how to address is how to adjust for how poor of a measurement Elo can often be.
+Younger players often gain 200 to 300 rating points in one year as their play matures; older players with titles may hit rating floors; and players often come off of hot streaks or tough patches.
+Players may choose different strategies against players perceived to be above or below their rating, or players less confident.
+There does not seem to be a good way to adjust for this---using age as a confounder helps---but I would really love to adjust for Elo K-factor, but I cannot find a nice dataset that contains it.
+
+\newpage
+\nocite{dilmaghani:gender}
+\printbibliography
+\end{document}
