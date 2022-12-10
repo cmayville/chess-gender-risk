@@ -4,6 +4,7 @@
 \usepackage[autostyle, english=american]{csquotes}
 \MakeOuterQuote{"}
 
+\usepackage{hyperref}
 \usepackage[]{algorithm2e}
 \usepackage{multirow}
 \usepackage{subfig}
@@ -37,7 +38,8 @@
         In this paper, we follow their analysis, changing two main things. 
         First, we use features of modern chess engines to compute a more wholistic and objective measurement of risk taking behavior. 
         Second, we relax their parametric assumptions and instead measure the direct casual effect with a double robust estimator.
-        INCLUDE RESULTS
+        
+        We find a small but significant causal effect pointing in the opposite direction of previous literature---women are on average more risk taking in our analysis then men.
 
     \section*{Model}
         The direct causal effect of gender on risk aversion can be represented as the average treatment effect (ATE), or the difference between the risk aversion of a player and the same player in a world where only their gender was changed.
@@ -117,7 +119,7 @@
     \subsection*{Model Fitting}
         We fit several models on the data with 10 folds, and calculated their cross validated mean squared error. 
         Each model included Elo rating, nationality, title, K-factor, age, number of recorded games played in 2019, and the players average opponent rating as confounders.
-        The following table shows each models error and the baseline error of the data:
+        The following table shows each models error and the baseline error of the data: \\
 
         \begin{tabular}{ |p{4cm}||p{2cm}|p{2cm}|p{3cm}|p{3cm}| }
             \hline
@@ -196,7 +198,7 @@
 
     \subsection*{Code}
         
-        Code is available at 
+        Code is available at \href{https://github.com/cmayville/chess-gender-risk}{github.com/cmayville/chess-gender-risk}.
 
 
 
